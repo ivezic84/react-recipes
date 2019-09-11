@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { recipeData } from "../data/tempDetails";
 import { Link } from "react-router-dom";
+
 export default class SingleRecipe extends Component {
   constructor(props) {
     super(props);
@@ -14,9 +15,7 @@ export default class SingleRecipe extends Component {
   }
 
   async componentDidMount() {
-    const url = `https://www.food2fork.com/api/get?key=${
-      process.env.REACT_APP_API_KEY
-    }&rId=${this.state.id}`;
+    const url = `https://www.food2fork.com/api/get?key=${process.env.REACT_APP_API_KEY}&rId=${this.state.id}`;
     try {
       const response = await fetch(url);
       const responseData = await response.json();
