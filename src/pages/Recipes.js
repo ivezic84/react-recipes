@@ -7,8 +7,8 @@ export default class Recipes extends Component {
   state = {
     recipes: [],
     search: "",
-    url: `https://www.food2fork.com/api/search?key=${process.env.REACT_APP_API_KEY}`,
-    base_url: `https://www.food2fork.com/api/search?key=${process.env.REACT_APP_API_KEY}`,
+    url: `https://www.food2fork.com/api/search?key=${process.env.REACT_API_KEY}`,
+    base_url: `https://www.food2fork.com/api/search?key=${process.env.REACT_API_KEY}`,
     query: "&q=",
     еrror: ""
   };
